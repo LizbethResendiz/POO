@@ -1,0 +1,114 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNUuG6FCymkXrCgpNLBtDeu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LizbethResendiz/POO/blob/main/Figuras\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Programa hecho por Lizbeth Resendiz Avila"
+      ],
+      "metadata": {
+        "id": "K3FC35fy-1yF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "UveFQt1y-02h",
+        "outputId": "6bf4dea5-66db-4506-a899-5293dd18caad"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Elige una opción\n",
+            "1_Circulo\n",
+            "2_Cuadrado\n",
+            "3_Triangulo\n",
+            "Opcion3\n",
+            "Dame la base del triangulo5\n",
+            "Dame la altura del triangulo7\n",
+            "El area del triangulo :  17.5\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Figuras:\n",
+        "  def __init_(self):\n",
+        "    self.a=0\n",
+        "    self.b=0\n",
+        "    self.c=0\n",
+        "\n",
+        "  def areas(self):\n",
+        "\n",
+        "    print(\"Elige una opción\")\n",
+        "    print(\"1_Circulo\")\n",
+        "    print(\"2_Cuadrado\")\n",
+        "    print(\"3_Triangulo\")\n",
+        "\n",
+        "    r=int(input(\"Opcion\"))\n",
+        "    return r\n",
+        "\n",
+        "  def cuadrado(self, b,h):\n",
+        "    area=b*h\n",
+        "    return area\n",
+        "\n",
+        "  def triangulo(self, b1,h1):\n",
+        "    area=(b1*h1)/2\n",
+        "    return area\n",
+        "\n",
+        "  def circulo(self, r):\n",
+        "    area=3.1416*(r**2)\n",
+        "    return area\n",
+        "\n",
+        "obj=Figuras()\n",
+        "S=obj.areas()\n",
+        "\n",
+        "if S==1:\n",
+        "  obj.a=float(input(\"Dame el radio\"))\n",
+        "  res=obj.circulo(obj.a)\n",
+        "  print(\"El area del circulo : \",res)\n",
+        "elif S==2:\n",
+        "  obj.a=float(input(\"Dame la base del cuadrado\"))\n",
+        "  obj.b=float(input(\"Dame la altura del cuadrado\"))\n",
+        "  res=obj.cuadrado(obj.a,obj.b)\n",
+        "  print(\"El area del cuadrado : \",res)\n",
+        "else:\n",
+        "  obj.a=float(input(\"Dame la base del triangulo\"))\n",
+        "  obj.b=float(input(\"Dame la altura del triangulo\"))\n",
+        "  res=obj.triangulo(obj.a,obj.b)\n",
+        "  print(\"El area del triangulo : \",res)"
+      ]
+    }
+  ]
+}
